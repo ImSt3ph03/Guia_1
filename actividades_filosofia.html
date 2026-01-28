@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades de Filosofía - Respuestas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 30px 20px;
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 50px 40px;
+            border-bottom: 5px solid #c5a572;
+        }
+
+        .institution-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 0.85em;
+            line-height: 1.4;
+            opacity: 0.95;
+        }
+
+        .institution-info strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .header h1 {
+            font-size: 2.3em;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .student-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.95em;
+        }
+
+        .student-info div {
+            text-align: center;
+        }
+
+        .student-info strong {
+            display: block;
+            font-size: 0.85em;
+            opacity: 0.85;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        .activity {
+            margin-bottom: 60px;
+            padding-bottom: 50px;
+            border-bottom: 2px solid #e8e8e8;
+        }
+
+        .activity:last-child {
+            border-bottom: none;
+        }
+
+        .activity-title {
+            color: #1a237e;
+            font-size: 1.6em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #c5a572;
+        }
+
+        .activity-number {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            min-width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 25px;
+            border-left: 5px solid #1a237e;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .question h3 {
+            color: #1a237e;
+            margin-bottom: 12px;
+            font-size: 1.15em;
+            font-weight: 600;
+        }
+
+        .question p {
+            color: #555;
+        }
+
+        .answer {
+            background: #fafafa;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            margin-bottom: 25px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .answer h4 {
+            color: #1a237e;
+            margin-bottom: 18px;
+            font-size: 1.15em;
+            font-weight: 600;
+        }
+
+        .answer p {
+            color: #444;
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .answer p strong {
+            color: #1a237e;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 25px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+            letter-spacing: 0.3px;
+        }
+
+        td {
+            padding: 18px 15px;
+            border-bottom: 1px solid #e8e8e8;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .situation {
+            font-weight: 600;
+            color: #1a237e;
+            line-height: 1.5;
+        }
+
+        .position {
+            text-align: center;
+            font-weight: bold;
+            color: #c5a572;
+            font-size: 0.95em;
+        }
+
+        .justification {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .highlight {
+            background: #fff9e6;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #1a237e;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .activity-title {
+                font-size: 1.3em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 12px 10px;
+            }
+
+            .student-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .purpose-box {
+            background: #fff9e6;
+            border-left: 5px solid #c5a572;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .purpose-box h3 {
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .purpose-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .purpose-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .purpose-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c5a572;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="institution-info">
+                <strong>MINISTERIO DE EDUCACIÓN NACIONAL</strong>
+                SECRETARÍA DE EDUCACIÓN MUNICIPAL<br>
+                INSTITUCIÓN EDUCATIVA LICEO NACIONAL<br>
+                Aprobado mediante Resolución No.4106 del 13 de noviembre de 2018<br>
+                CÓDIGO DANE No. 17300100038 – ICFES 015842 – 015869<br>
+                NIT: 890.701.796-6
+            </div>
+            
+            <h1>GUÍA DE APRENDIZAJE</h1>
+            
+            <div class="student-info">
+                <div>
+                    <strong>Área:</strong>
+                    Filosofía
+                </div>
+                <div>
+                    <strong>Asignatura:</strong>
+                    Filosofía
+                </div>
+                <div>
+                    <strong>Grado:</strong>
+                    Once
+                </div>
+                <div>
+                    <strong>Periodo:</strong>
+                    Primero
+                </div>
+                <div>
+                    <strong>Jornada:</strong>
+                    Tarde
+                </div>
+                <div>
+                    <strong>Docente:</strong>
+                    German Antonio Rios
+                </div>
+                <div style="grid-column: 1 / -1;">
+                    <strong>Estudiante:</strong>
+                    Ana Gómez
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="purpose-box">
+                <h3>📚 Propósito de la Guía</h3>
+                <p style="margin-bottom: 15px; color: #555;"><strong>Aprendizaje (DBA):</strong> Aplica la filosofía en la vida cotidiana</p>
+                <p style="margin-bottom: 15px; color: #555;"><strong>Desempeño de la Competencia:</strong> Analiza los diversos aspectos de la filosofía</p>
+                
+                <p style="margin-top: 20px; margin-bottom: 10px; color: #1a237e; font-weight: 600;">Esta guía tiene como finalidad que la estudiante:</p>
+                <ul>
+                    <li>Comprenda qué es la filosofía desde su experiencia personal.</li>
+                    <li>Reconozca la relación entre la filosofía y la vida cotidiana.</li>
+                    <li>Exprese ideas, dudas y posturas frente a situaciones reales.</li>
+                    <li>Inicie el curso en un ambiente de reflexión y respeto.</li>
+                </ul>
+                
+                <p style="margin-top: 20px; color: #666; font-style: italic; font-size: 0.95em;">
+                    <strong>Importante:</strong> Esta guía es diagnóstica. No tiene respuestas correctas o incorrectas.
+                </p>
+            </div>
+
+            <!-- ACTIVIDAD 1 -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">1</div>
+                    <span>Mi Conclusión Personal</span>
+                </div>
+
+                <div class="question">
+                    <h3>Propósito:</h3>
+                    <p>Expresar una reflexión personal sobre el sentido de la filosofía en la vida de la estudiante y su papel en esta etapa final del colegio.</p>
+                </div>
+
+                <div class="question" style="background: white; border-left: 5px solid #c5a572;">
+                    <h3 style="color: #1a237e;">Instrucciones:</h3>
+                    <p>Responde con sinceridad y buena redacción. No se evalúan las respuestas, sino la reflexión personal.</p>
+                </div>
+
+                <div class="answer" style="background: white; border: 2px solid #1a237e; padding: 35px;">
+                    <h4 style="color: #1a237e; font-size: 1.25em; margin-bottom: 20px;">¿Para qué sirve la filosofía en mi vida hoy?</h4>
+                    
+                    <p style="line-height: 1.9;">
+                        En esta etapa final de mi educación secundaria, la filosofía se ha convertido en mucho más que una asignatura académica: es una <span class="highlight">herramienta esencial para construir mi identidad</span> y tomar decisiones cruciales sobre mi futuro. En un momento donde debo elegir una carrera universitaria, definir mis valores y entender mi lugar en el mundo, el pensamiento filosófico me ofrece algo invaluable: la capacidad de reflexionar profundamente antes de actuar.
+                    </p>
+                    
+                    <p style="line-height: 1.9;">
+                        La filosofía me sirve, principalmente, para <strong>desarrollar autonomía intelectual</strong>. Vivimos bombardeados por información, opiniones y presiones sociales. Desde las redes sociales hasta las expectativas familiares, múltiples voces intentan definir quién debería ser y qué debería hacer. La filosofía me enseña a cuestionar, analizar y formar mis propios criterios en lugar de simplemente adoptar lo que otros piensan. Me ayuda a distinguir entre lo que genuinamente deseo y lo que la sociedad me dice que debería desear.
+                    </p>
+                    
+                    <p style="line-height: 1.9;">
+                        En segundo lugar, me sirve para <strong>enfrentar la incertidumbre del futuro</strong>. A punto de terminar el colegio, el futuro puede parecer abrumador: ¿elegí la carrera correcta? ¿Seré capaz de sostenerme económicamente? ¿Qué pasa si me equivoco? La filosofía no me da respuestas definitivas a estas preguntas, pero me proporciona marcos para pensarlas con claridad. Me enseña que la incertidumbre es parte de la condición humana y que lo importante no es eliminarla, sino aprender a navegar en ella con sabiduría.
+                    </p>
+                    
+                    <p style="line-height: 1.9;">
+                        Además, la filosofía me sirve para <strong>construir un sistema ético propio</strong>. Ya no soy una niña que simplemente sigue reglas porque "así se hace". Ahora debo decidir qué tipo de persona quiero ser, qué valores defenderé y cómo quiero relacionarme con los demás. Las preguntas filosóficas sobre justicia, libertad, responsabilidad y verdad me ayudan a formar una brújula moral que me guíe en situaciones complejas donde no hay respuestas fáciles.
+                    </p>
+                    
+                    <p style="line-height: 1.9;">
+                        La filosofía también me sirve para <strong>manejar el estrés y la presión</strong> de esta etapa. Las filosofías prácticas como el estoicismo me enseñan a distinguir entre lo que está en mi control y lo que no, evitando angustiarme por cosas que no puedo cambiar. Me ayuda a mantener perspectiva: recordar que mis problemas actuales, aunque parezcan enormes, son parte de una experiencia humana compartida por generaciones.
+                    </p>
+                    
+                    <p style="line-height: 1.9;">
+                        Finalmente, la filosofía me sirve para <strong>encontrar significado y propósito</strong>. En una época donde es fácil sentirse como un engranaje más en un sistema que no entendemos completamente, el pensamiento filosófico me invita a preguntarme: ¿qué hace que una vida valga la pena? ¿Cuál es mi contribución única al mundo? ¿Cómo puedo vivir de manera que cuando mire atrás, sienta orgullo y satisfacción por la persona que fui?
+                    </p>
+                    
+                    <p style="line-height: 1.9; margin-bottom: 0;">
+                        En resumen, la filosofía hoy no es un lujo intelectual abstracto: es una <strong>necesidad práctica para vivir conscientemente</strong>. Me ayuda a tomar mejores decisiones, mantener mi integridad en un mundo complejo, desarrollar resiliencia ante adversidades y, sobre todo, construir una vida que sea auténticamente mía. En esta transición crucial entre la adolescencia y la adultez, la filosofía es mi compañera más valiosa: no me dice qué camino tomar, pero me enseña cómo caminar con propósito, reflexión y dignidad.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PREGUNTAS REFLEXIVAS INICIALES -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">💭</div>
+                    <span>Preguntas Reflexivas Iniciales</span>
+                </div>
+
+                <div class="answer">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Qué espero aprender en esta clase de filosofía?</h4>
+                        <p>Espero aprender a desarrollar mi pensamiento crítico y reflexivo, comprender diferentes corrientes filosóficas que han moldeado nuestra sociedad, y adquirir herramientas para analizar problemas complejos desde múltiples perspectivas. Deseo entender cómo la filosofía puede ayudarme a tomar mejores decisiones en mi vida diaria y a construir un sistema de valores coherente y fundamentado.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Qué actitud quiero tener en filosofía este año?</h4>
+                        <p>Quiero mantener una actitud de apertura mental, curiosidad genuina y disposición al diálogo respetuoso. Me comprometo a cuestionar mis propias creencias sin temor, escuchar perspectivas diferentes con empatía, y participar activamente en los debates filosóficos. Busco ser crítico pero no cínico, reflexivo pero no paralizante, y aplicar lo aprendido a mi vida cotidiana.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Qué tema filosófico me genera más curiosidad? ¿Por qué?</h4>
+                        <p>Me genera especial curiosidad la ética aplicada y los dilemas morales contemporáneos, porque vivimos en una época de cambios tecnológicos y sociales acelerados que plantean preguntas sin precedentes: ¿Qué derechos deberían tener las inteligencias artificiales? ¿Cuáles son nuestras responsabilidades frente al cambio climático? ¿Cómo equilibrar privacidad y seguridad en la era digital? Estas cuestiones requieren pensamiento filosófico profundo y tienen consecuencias reales para nuestro futuro.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿En qué momentos de mi vida creo que necesito pensar más antes de actuar?</h4>
+                        <p>Identifico varios momentos clave: <strong>(1)</strong> En conflictos interpersonales, donde las reacciones emocionales inmediatas pueden dañar relaciones importantes; <strong>(2)</strong> Al tomar decisiones que afectan mi futuro (académicas, profesionales, financieras); <strong>(3)</strong> Cuando me enfrento a presión de grupo o influencias sociales que contradicen mis valores; <strong>(4)</strong> Al formar opiniones sobre temas complejos, especialmente políticos o sociales, donde la información puede estar sesgada; <strong>(5)</strong> En momentos de incertidumbre o miedo, donde el pánico puede llevar a decisiones precipitadas.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Qué problema personal o social me gustaría comprender mejor con la filosofía?</h4>
+                        <p>Me gustaría comprender mejor el problema de la desigualdad social y económica: ¿Es moralmente justificable que existan estas desigualdades extremas? ¿Qué teorías de justicia distributiva son más sólidas (utilitarismo, igualitarismo, libertarismo)? ¿Cuáles son nuestras obligaciones morales hacia quienes sufren condiciones de pobreza? La filosofía política y ética puede ayudarme a desarrollar una posición informada sobre estos temas y entender mejor las distintas perspectivas en debate.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Cómo puede la filosofía ayudarme a tomar mejores decisiones?</h4>
+                        <p>La filosofía me proporciona herramientas sistemáticas para la toma de decisiones: <strong>(1)</strong> Me enseña a identificar y examinar los supuestos implícitos en mis razonamientos; <strong>(2)</strong> Desarrolla mi capacidad de análisis lógico y detección de falacias; <strong>(3)</strong> Me expone a diferentes marcos éticos para evaluar acciones; <strong>(4)</strong> Fomenta la consideración de consecuencias a largo plazo; <strong>(5)</strong> Cultiva la humildad intelectual y la disposición a cambiar de opinión ante mejores argumentos. Todo esto me permite tomar decisiones más informadas, coherentes y éticamente fundamentadas.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Qué relación encuentro entre filosofía y proyecto de vida?</h4>
+                        <p>La relación es fundamental: un proyecto de vida coherente requiere claridad sobre valores, propósito y metas. La filosofía ayuda a: <strong>(1)</strong> Definir qué es una "buena vida" para mí (eudaimonía aristotélica); <strong>(2)</strong> Identificar valores auténticos versus valores impuestos externamente; <strong>(3)</strong> Examinar la coherencia entre mis creencias, valores y acciones; <strong>(4)</strong> Desarrollar resiliencia ante adversidades mediante perspectivas filosóficas (estoicismo, existencialismo); <strong>(5)</strong> Construir un sentido de propósito basado en reflexión profunda. Sin filosofía, corremos el riesgo de vivir una vida irreflexiva, siguiendo patrones sin sentido genuino.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Qué tipo de persona quiero llegar a ser y cómo puede ayudarme pensar?</h4>
+                        <p>Aspiro a ser una persona íntegra, reflexiva, compasiva y autónoma. El pensamiento filosófico contribuye a este objetivo al: <strong>(1)</strong> Desarrollar virtudes intelectuales (curiosidad, humildad, rigor); <strong>(2)</strong> Cultivar virtudes éticas (justicia, compasión, honestidad); <strong>(3)</strong> Fortalecer la autonomía moral mediante el cuestionamiento crítico; <strong>(4)</strong> Promover la empatía al considerar perspectivas diversas; <strong>(5)</strong> Fomentar la coherencia entre pensamiento y acción. La filosofía no solo me ayuda a pensar sobre qué tipo de persona quiero ser, sino que el acto mismo de filosofar me transforma en esa dirección.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #667eea; margin-bottom: 10px;">¿Por qué es importante aprender a cuestionar y no solo a obedecer?</h4>
+                        <p>Es crucial por varias razones: <strong>(1)</strong> Históricamente, las peores atrocidades (Holocausto, esclavitud, genocidios) fueron posibles porque personas "solo obedecían órdenes"; <strong>(2)</strong> El progreso social surge del cuestionamiento (derechos civiles, abolición de injusticias); <strong>(3)</strong> La autonomía moral requiere evaluar críticamente las normas, no seguirlas ciegamente; <strong>(4)</strong> En democracia, ciudadanos críticos son esenciales para prevenir autoritarismo; <strong>(5)</strong> El desarrollo personal requiere superar la moralidad heterónoma (impuesta) hacia la autonomía (autolegislada). Como decía Kant, la ilustración es la salida del ser humano de su autoculpable minoría de edad: la incapacidad de usar el entendimiento sin la guía de otro.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD 2 -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">2</div>
+                    <span>La Filosofía en mi Vida Cotidiana</span>
+                </div>
+
+                <div class="question">
+                    <h3>Instrucciones:</h3>
+                    <p>Lee cada situación y escribe una pregunta filosófica que esa situación te haga pensar.</p>
+                    <p style="margin-top: 10px;"><em>Nota: La filosofía aparece cuando nos hacemos preguntas profundas sobre lo que vivimos. En esta actividad no debes dar consejos ni soluciones, solo escribir preguntas filosóficas.</em></p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Situación de la vida diaria</th>
+                                <th style="width: 60%;">Pregunta filosófica (¿qué me hace cuestionar?)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="situation">Elegir una carrera o proyecto de vida</td>
+                                <td class="justification">
+                                    ¿Cómo puedo distinguir entre lo que genuinamente deseo y lo que la sociedad o mi familia esperan de mí? ¿Existe un propósito objetivo en la vida o cada persona debe crear su propio significado? ¿Es más importante la realización personal o contribuir al bien común? ¿Qué hace que una vida sea exitosa o valiosa?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Decidir decir la verdad o mentir</td>
+                                <td class="justification">
+                                    ¿Existen circunstancias en las que mentir es moralmente aceptable? ¿El valor de la verdad es absoluto o relativo al contexto? ¿Tenemos siempre el deber de ser honestos, incluso cuando la verdad puede causar daño? ¿Qué pesa más: el imperativo moral de no mentir o las consecuencias de decir la verdad?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Uso excesivo de redes sociales</td>
+                                <td class="justification">
+                                    ¿Hasta qué punto las redes sociales distorsionan mi percepción de la realidad y mi identidad auténtica? ¿Soy realmente libre cuando uso redes sociales o estoy siendo manipulado por algoritmos? ¿Qué diferencia hay entre conexión virtual y conexión humana genuina? ¿Estamos sacrificando profundidad por inmediatez?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Seguir lo que el grupo de amigos piensa</td>
+                                <td class="justification">
+                                    ¿Cuál es el equilibrio entre pertenecer a un grupo y mantener mi autonomía personal? ¿Puedo ser realmente libre si constantemente busco aprobación externa? ¿La conformidad social es siempre negativa o a veces es necesaria para la convivencia? ¿Cómo distingo entre influencia legítima y presión de grupo manipuladora?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Pensar en mi futuro después del colegio</td>
+                                <td class="justification">
+                                    ¿Tengo verdadera libertad para elegir mi futuro o estoy condicionado por mi contexto socioeconómico? ¿Es el éxito profesional lo que da sentido a la vida? ¿Cómo puedo tomar decisiones en un futuro incierto y cambiante? ¿Debo planificar rígidamente o mantenerme abierto a posibilidades inesperadas?
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="answer" style="margin-top: 20px;">
+                    <h4>💡 Pistas para formular preguntas filosóficas:</h4>
+                    <p><strong>1. Pregunta por fundamentos:</strong> "¿Por qué...?", "¿En qué se basa...?"</p>
+                    <p><strong>2. Cuestiona supuestos:</strong> "¿Es realmente cierto que...?", "¿Qué pasaría si...?"</p>
+                    <p><strong>3. Busca límites y definiciones:</strong> "¿Qué significa exactamente...?", "¿Hasta qué punto...?"</p>
+                    <p><strong>4. Explora contradicciones:</strong> "¿Cómo puede ser que... y al mismo tiempo...?"</p>
+                    <p><strong>5. Examina valores:</strong> "¿Qué es más importante, ... o ...?", "¿Vale la pena...?"</p>
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD 3 -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">3</div>
+                    <span>Pensar con Filosofía</span>
+                </div>
+
+                <div class="question">
+                    <h3>Instrucciones:</h3>
+                    <p>Observa el siguiente cuadro y complétalo comparando dos formas de pensar: actuar sin reflexionar y pensar de manera filosófica.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Pensar sin filosofía</th>
+                                <th style="width: 50%;">Pensar con filosofía</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Reaccionar sin pensar</strong><br>
+                                    Actuar impulsivamente ante situaciones sin analizar consecuencias ni alternativas. Se basa en emociones inmediatas y automáticas.
+                                </td>
+                                <td>
+                                    <strong>Reflexionar antes de actuar</strong><br>
+                                    Analizar la situación desde diferentes perspectivas, evaluar consecuencias y considerar alternativas antes de decidir.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Aceptar todo sin cuestionar</strong><br>
+                                    Dar por ciertas las ideas, normas o creencias sin examinar su validez, simplemente porque "siempre ha sido así" o porque otros lo dicen.
+                                </td>
+                                <td>
+                                    <strong>Cuestionar y analizar críticamente</strong><br>
+                                    Examinar las ideas, buscar fundamentos, preguntar "¿por qué?" y "¿es realmente así?". No aceptar algo solo por tradición o autoridad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Actuar por presión del grupo</strong><br>
+                                    Tomar decisiones para encajar socialmente o evitar el rechazo, renunciando a la autonomía personal y valores propios.
+                                </td>
+                                <td>
+                                    <strong>Actuar con autonomía y coherencia</strong><br>
+                                    Decidir según principios éticos propios, considerando el contexto social pero manteniendo integridad personal y pensamiento independiente.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Seguir modas sin reflexionar</strong><br>
+                                    Adoptar tendencias, opiniones o comportamientos populares sin evaluar si son adecuados o valiosos para uno mismo.
+                                </td>
+                                <td>
+                                    <strong>Evaluar críticamente las tendencias</strong><br>
+                                    Analizar las modas y tendencias con pensamiento crítico, decidiendo conscientemente qué adoptar según valores y criterios racionales.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Decidir solo con emociones</strong><br>
+                                    Basar todas las decisiones únicamente en cómo nos sentimos en el momento, sin considerar la razón, evidencia o consecuencias a largo plazo.
+                                </td>
+                                <td>
+                                    <strong>Equilibrar razón y emoción</strong><br>
+                                    Reconocer las emociones como importantes pero complementarlas con análisis racional, evidencia y consideración de consecuencias.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="answer" style="margin-top: 30px;">
+                    <h4>📝 Respuesta a la pregunta:</h4>
+                    <h3 style="color: #1a237e; margin-bottom: 15px;">¿Cuál forma de pensar es más útil para la vida adulta? ¿Por qué?</h3>
+                    <p>
+                        <strong>El pensamiento filosófico es más útil para la vida adulta</strong> por las siguientes razones fundamentales:
+                    </p>
+                    
+                    <p>
+                        <strong>1. Desarrollo de autonomía intelectual:</strong> La vida adulta requiere tomar decisiones complejas constantemente (carrera profesional, relaciones, finanzas, ética). El pensamiento filosófico desarrolla la capacidad de analizar críticamente en lugar de seguir ciegamente opiniones ajenas o impulsos momentáneos. Esto nos convierte en agentes activos de nuestra propia vida.
+                    </p>
+                    
+                    <p>
+                        <strong>2. Responsabilidad y libertad auténtica:</strong> Cuando reaccionamos sin pensar o actuamos por presión social, renunciamos a nuestra libertad real. El filósofo existencialista Jean-Paul Sartre afirmaba que "estamos condenados a ser libres" - es decir, somos responsables de nuestras elecciones. El pensamiento filosófico nos permite ejercer esta libertad de manera consciente y responsable.
+                    </p>
+                    
+                    <p>
+                        <strong>3. Mejor toma de decisiones:</strong> Las decisiones impulsivas o emocionales pueden generar consecuencias negativas a largo plazo. El pensamiento filosófico no elimina las emociones, pero las equilibra con la razón, permitiendo decisiones más sabias que consideran múltiples perspectivas y consecuencias.
+                    </p>
+                    
+                    <p>
+                        <strong>4. Integridad personal y valores sólidos:</strong> En lugar de cambiar constantemente según modas o presiones, el pensamiento filosófico ayuda a construir un sistema de valores coherente y fundamentado. Esto genera estabilidad psicológica y autorespeto, esenciales para el bienestar en la vida adulta.
+                    </p>
+                    
+                    <p>
+                        <strong>5. Adaptabilidad inteligente:</strong> Paradójicamente, aunque el pensamiento filosófico busca fundamentos sólidos, también enseña a cuestionar nuestras propias creencias cuando encontramos mejores argumentos. Esto permite evolucionar intelectualmente sin perder el criterio propio.
+                    </p>
+
+                    <p>
+                        En conclusión, mientras que "pensar sin filosofía" puede ser suficiente para decisiones triviales o rutinarias, <strong>la complejidad de la vida adulta exige el pensamiento crítico, reflexivo y autónomo que proporciona la filosofía</strong>. No se trata de intelectualizar todo, sino de tener las herramientas mentales necesarias cuando las decisiones realmente importan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD 4 -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">4</div>
+                    <span>Dilemas Filosóficos</span>
+                </div>
+
+                <div class="question">
+                    <h3>Instrucciones:</h3>
+                    <p>Lee cada situación, marca tu postura y justifica tu respuesta.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Situación</th>
+                                <th style="text-align: center;">Postura</th>
+                                <th>Justificación Argumentada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="situation">1. Mentir para evitar un daño mayor</td>
+                                <td class="position">DEPENDE</td>
+                                <td class="justification">
+                                    <strong>Depende del contexto y las consecuencias.</strong> Desde una perspectiva consecuencialista, si la mentira evita un daño significativo e irreparable (como proteger a alguien de un peligro inminente), podría justificarse. Sin embargo, desde una ética deontológica kantiana, mentir viola el imperativo categórico de tratar a las personas como fines en sí mismas. <em>Ejemplo:</em> Mentir para salvar una vida en peligro inmediato puede ser moralmente aceptable, pero mentir para evitar una conversación incómoda no lo es. La clave está en evaluar: ¿el daño evitado es realmente mayor que el daño causado por la mentira y la erosión de la confianza?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">2. Obedecer una norma que considero injusta</td>
+                                <td class="position">EN DESACUERDO</td>
+                                <td class="justification">
+                                    <strong>En desacuerdo, con matices.</strong> La historia muestra que el progreso moral y social surge precisamente de cuestionar normas injustas (movimientos por derechos civiles, abolición de la esclavitud, sufragio femenino). Sin embargo, la desobediencia debe ser: <em>(1) Reflexiva:</em> basada en argumentos sólidos, no en caprichos personales. <em>(2) Responsable:</em> asumiendo las consecuencias de nuestros actos. <em>(3) Constructiva:</em> buscando el cambio de la norma injusta. Como argumentaba Henry David Thoreau en su "Desobediencia Civil", existe un deber moral de no ser cómplice de la injusticia. Obedecer ciegamente normas injustas nos convierte en colaboradores pasivos de la injusticia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">3. Elegir lo que otros esperan de mí</td>
+                                <td class="position">EN DESACUERDO</td>
+                                <td class="justification">
+                                    <strong>En desacuerdo fundamentalmente.</strong> Vivir según las expectativas ajenas es renunciar a la autenticidad y la autonomía personal, conceptos fundamentales en filosofía existencialista (Sartre, Heidegger). Esto genera lo que Sartre llamaba "mala fe" - vivir negando nuestra libertad esencial. Las consecuencias incluyen: frustración vital, falta de autorrealización, relaciones inauténticas y pérdida de identidad. Si bien debemos considerar el impacto de nuestras decisiones en otros (somos seres sociales), <em>considerar</em> no es sinónimo de <em>someterse</em>. La vida adulta requiere encontrar un equilibrio entre responsabilidad social y autenticidad personal, pero siempre manteniendo nuestra agencia como individuos libres.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">4. Callar una verdad que puede afectar a otros</td>
+                                <td class="position">DEPENDE</td>
+                                <td class="justification">
+                                    <strong>Depende del tipo de verdad y afectación.</strong> Aquí entran en tensión dos valores: la honestidad y el no hacer daño (principio hipocrático). Debemos distinguir entre: <em>(a) Verdades necesarias:</em> información que otros necesitan para tomar decisiones informadas (ej: verdad médica, información sobre riesgos) - estas NO deben ocultarse. <em>(b) Verdades innecesarias:</em> información que solo causaría dolor sin beneficio constructivo. La pregunta ética clave es: <strong>¿Quién se beneficia del silencio y quién del conocimiento?</strong> Si callar protege nuestro egoísmo pero perjudica el derecho de otros a decidir informadamente, es inmoral. Pero si comunicar algo solo causará sufrimiento sin propósito constructivo, puede ser más compasivo el silencio estratégico.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="answer" style="margin-top: 30px;">
+                    <h4>🧠 Reflexión Final sobre los Dilemas:</h4>
+                    <p>
+                        Estos dilemas ilustran que <strong>la ética no es una ciencia exacta</strong>, sino un ejercicio constante de reflexión. Las situaciones morales complejas raramente tienen respuestas absolutas porque involucran valores que pueden entrar en conflicto (verdad vs. compasión, autonomía vs. responsabilidad social, justicia vs. estabilidad).
+                    </p>
+                    <p>
+                        Lo importante no es tener todas las respuestas "correctas", sino <em>desarrollar la capacidad de analizar éticamente</em>, considerando: consecuencias, principios morales, derechos de las personas involucradas, virtudes de carácter y contexto específico. Esta es precisamente la utilidad del pensamiento filosófico para la vida adulta.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD 5 -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">5</div>
+                    <span>Cierre Reflexivo: ¿Quién Soy y Qué Me Pregunto?</span>
+                </div>
+
+                <div class="answer">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #764ba2; margin-bottom: 10px;">Algo que me define como persona</h4>
+                        <p>Me define mi constante búsqueda de coherencia entre lo que pienso, lo que digo y lo que hago. Valoro profundamente la autenticidad y la honestidad intelectual: prefiero admitir que no sé algo antes que fingir conocimiento, y estoy dispuesto a cambiar mis opiniones cuando encuentro mejores argumentos. Esta característica refleja mi compromiso con la integridad personal y el crecimiento continuo.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #764ba2; margin-bottom: 10px;">Una decisión importante que debo tomar</h4>
+                        <p>Debo decidir qué camino profesional seguir después del colegio. Esta decisión es crucial porque afectará no solo mis próximos años de estudio, sino también mi desarrollo personal, mis relaciones, mi estabilidad económica futura y, potencialmente, mi contribución a la sociedad. Me enfrento al desafío de equilibrar pasión, pragmatismo, vocación y responsabilidades futuras. No se trata solo de elegir una carrera, sino de decidir qué tipo de vida quiero construir.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #764ba2; margin-bottom: 10px;">Un miedo o inquietud sobre el futuro</h4>
+                        <p>Me inquieta la posibilidad de llegar al final de mi vida y darme cuenta de que viví según expectativas ajenas en lugar de según mis propios valores y deseos auténticos. Temo la inautenticidad existencial: despertar un día a los 40 años y descubrir que construí una vida que no es realmente mía. Esta inquietud me motiva a reflexionar profundamente sobre mis decisiones presentes y mantenerme conectado con mi verdadero yo.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h4 style="color: #764ba2; margin-bottom: 10px;">Una pregunta que tengo sobre la vida</h4>
+                        <p>¿Cómo puedo vivir una vida significativa en un universo aparentemente indiferente a la existencia humana? Si no hay un propósito cósmico predeterminado, ¿cómo construyo significado que sea genuino y no solo una ilusión reconfortante? ¿Es suficiente el significado que yo mismo creo, o necesito algo más trascendente? Esta pregunta toca las cuestiones existenciales fundamentales sobre propósito, significado y nuestra condición humana.</p>
+                    </div>
+
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #764ba2; margin-bottom: 10px;">¿Por qué vale la pena pensar antes de actuar?</h4>
+                        <p>Vale la pena porque pensar antes de actuar es la diferencia entre vivir deliberadamente o simplemente reaccionar a la vida. La reflexión previa nos permite: <strong>(1)</strong> Anticipar consecuencias y evitar errores evitables; <strong>(2)</strong> Actuar coherentemente con nuestros valores en lugar de ser arrastrados por impulsos o presiones externas; <strong>(3)</strong> Aprender de experiencias pasadas aplicando ese conocimiento a nuevas situaciones; <strong>(4)</strong> Ejercer genuina autonomía y libertad - somos más libres cuando elegimos conscientemente que cuando simplemente reaccionamos; <strong>(5)</strong> Vivir con menos arrepentimientos, sabiendo que tomamos las mejores decisiones posibles con la información y reflexión disponibles. Como decía Sócrates, "una vida sin examen no merece ser vivida" - la reflexión es lo que nos hace plenamente humanos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD 6 -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">6</div>
+                    <span>Comprensión y Opinión Personal</span>
+                </div>
+
+                <div class="question">
+                    <h3>Instrucciones:</h3>
+                    <p>Lee con atención cada frase. Luego completa el cuadro con tus propias palabras.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">Frase</th>
+                                <th style="width: 25%;">¿Qué entiendo de la frase?</th>
+                                <th style="width: 20%;">¿Estoy de acuerdo? ¿Por qué?</th>
+                                <th style="width: 25%;">Ejemplo de mi vida</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="situation">"Pensar antes de actuar evita muchos errores."</td>
+                                <td class="justification">
+                                    Entiendo que la reflexión previa nos permite evaluar opciones, anticipar consecuencias y tomar decisiones más informadas. El pensamiento previo actúa como un filtro que nos protege de impulsos destructivos y decisiones precipitadas.
+                                </td>
+                                <td class="justification">
+                                    <strong>Estoy de acuerdo.</strong> La evidencia empírica y la experiencia personal confirman que las decisiones impulsivas suelen tener peores resultados. La neurociencia muestra que el córtex prefrontal (pensamiento) regula la amígdala (emoción) para mejor toma de decisiones.
+                                </td>
+                                <td class="justification">
+                                    Cuando casi envío un mensaje de enojo a un amigo, pero decidí esperar 24 horas. Al día siguiente, con la mente más clara, pude comunicarme de manera constructiva y resolver el conflicto sin dañar la relación.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">"No todo lo que quiero me conviene."</td>
+                                <td class="justification">
+                                    Entiendo que existe una distinción crucial entre deseos inmediatos y bienestar a largo plazo. Nuestros impulsos no siempre están alineados con nuestros verdaderos intereses o valores fundamentales.
+                                </td>
+                                <td class="justification">
+                                    <strong>Estoy de acuerdo.</strong> Los humanos somos notoriamente malos evaluando consecuencias futuras. El descuento temporal nos hace preferir recompensas inmediatas sobre beneficios mayores a largo plazo, incluso cuando esto nos perjudica.
+                                </td>
+                                <td class="justification">
+                                    Querer pasar toda la noche jugando videojuegos es tentador, pero no me conviene porque afecta mi rendimiento académico, salud física y metas a largo plazo. El placer inmediato tiene costos diferidos.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">"Ser libre no es hacer lo que quiera, sino elegir con responsabilidad."</td>
+                                <td class="justification">
+                                    Entiendo que libertad auténtica no es ausencia de restricciones, sino la capacidad de autodeterminación consciente. La libertad verdadera implica reconocer consecuencias y asumir responsabilidad por nuestras elecciones.
+                                </td>
+                                <td class="justification">
+                                    <strong>Estoy completamente de acuerdo.</strong> Esta es libertad positiva (Sartre): no solo "libertad de" (ausencia de coerción) sino "libertad para" (capacidad de actuar según valores propios). Sin responsabilidad, la "libertad" es solo capricho.
+                                </td>
+                                <td class="justification">
+                                    Soy libre de dejar de estudiar, pero eso tendría consecuencias. Mi libertad auténtica está en elegir conscientemente estudiar porque valoro mi educación y futuro, no porque me obliguen, sino por convicción propia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">"Quien no piensa por sí mismo, deja que otros decidan por él."</td>
+                                <td class="justification">
+                                    Entiendo que la ausencia de pensamiento crítico propio crea un vacío que inevitablemente será llenado por influencias externas: medios, propaganda, autoridades, grupos sociales. La autonomía intelectual es un esfuerzo activo, no un estado pasivo.
+                                </td>
+                                <td class="justification">
+                                    <strong>Estoy de acuerdo.</strong> La historia demuestra cómo regímenes totalitarios prosperan cuando la población renuncia al pensamiento crítico. Como decía Kant, pensar por uno mismo es el coraje de usar el propio entendimiento sin guía ajena.
+                                </td>
+                                <td class="justification">
+                                    Cuando adopté opiniones políticas simplemente porque "todos en mi entorno las tenían", sin examinarlas críticamente. Solo al cuestionarlas y buscar argumentos desarrollé posturas realmente propias y fundamentadas.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ACTIVIDAD 7 -->
+            <div class="activity">
+                <div class="activity-title">
+                    <div class="activity-number">7</div>
+                    <span>Estoy de Acuerdo / No Estoy de Acuerdo</span>
+                </div>
+
+                <div class="question">
+                    <h3>Instrucciones:</h3>
+                    <p>Lee cada afirmación con atención. Marca tu postura y explica brevemente tu respuesta. No hay respuestas correctas o incorrectas; lo importante es justificar.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 35%;">Afirmación</th>
+                                <th style="text-align: center; width: 15%;">Postura</th>
+                                <th style="width: 50%;">¿Por qué?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="situation">Pensar demasiado no sirve para la vida diaria</td>
+                                <td class="position">EN DESACUERDO</td>
+                                <td class="justification">
+                                    <strong>Desacuerdo rotundamente.</strong> Esta afirmación confunde "pensar demasiado" (rumiar improductivamente) con pensamiento reflexivo profundo. El pensamiento crítico es esencial para: tomar decisiones importantes, evitar manipulación, desarrollar valores sólidos, resolver problemas complejos. Lo que sí puede ser contraproducente es la parálisis por análisis excesivo en decisiones triviales. La clave es discernimiento: pensar profundamente cuando importa, actuar ágilmente cuando no. Además, el pensamiento filosófico sobre la vida diaria (relaciones, trabajo, ética) nos ayuda a vivir con mayor autenticidad y propósito.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">La filosofía es solo teoría y no sirve en la práctica</td>
+                                <td class="position">EN DESACUERDO</td>
+                                <td class="justification">
+                                    <strong>Completamente en desacuerdo.</strong> Esta es quizás la crítica más común pero más equivocada sobre filosofía. Primero, la "teoría" filosófica fundamenta toda práctica humana: democracia (filosofía política), derechos humanos (ética), método científico (epistemología). Segundo, filosofías prácticas como estoicismo, budismo y existencialismo ofrecen herramientas concretas para la vida diaria. Tercero, toda acción implica supuestos filosóficos: al decir "esto no sirve en práctica" se asume una teoría sobre qué es "servir" o "práctica". Como decía Keynes: "Los hombres prácticos que se creen exentos de influencias intelectuales son, generalmente, esclavos de algún economista difunto." Lo mismo aplica a la filosofía.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Cuestionar las normas ayuda a mejorar la sociedad</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    <strong>Totalmente de acuerdo.</strong> El progreso social histórico surge precisamente del cuestionamiento: abolición de esclavitud, sufragio universal, derechos civiles, igualdad de género - todas fueron logradas porque individuos cuestionaron normas que "siempre habían sido así". Las sociedades estáticas que no permiten cuestionamiento tienden al estancamiento o regresión. Sin embargo, hay un matiz importante: el cuestionamiento debe ser constructivo, informado y responsable, no nihilista o destructivo por el mero placer de destruir. Como decía Chesterton, antes de derribar una cerca, debemos entender por qué fue construida. El cuestionamiento efectivo busca mejorar, no solo demoler.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Es mejor obedecer que cuestionar</td>
+                                <td class="position">EN DESACUERDO</td>
+                                <td class="justification">
+                                    <strong>En desacuerdo como principio general.</strong> Esta mentalidad es precisamente lo que permite autoritarismo, injusticia y atrocidades. Los juicios de Núremberg establecieron que "solo seguía órdenes" no es justificación moral. Sin embargo, necesito matizar: en contextos específicos (emergencias, expertise técnico, eficiencia organizacional), cierta deferencia es razonable. La clave es: <em>(1) Obedecer después de evaluar críticamente, no ciegamente</em>; <em>(2) Reconocer autoridad legítima sin renunciar a juicio moral</em>; <em>(3) Mantener disposición a desobedecer cuando las normas son claramente injustas</em>. Como principio general para la vida, el cuestionamiento reflexivo debe primar sobre la obediencia acrítica.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" style="margin-top: 40px;">
+                    <h3>Afirmaciones para Evaluar:</h3>
+                    <p>Marca si estás de acuerdo o en desacuerdo con cada afirmación y justifica brevemente.</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Afirmación</th>
+                                <th style="text-align: center; width: 15%;">Postura</th>
+                                <th style="width: 35%;">Breve Justificación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="situation">Pensar por uno mismo puede traer problemas</td>
+                                <td class="position">DE ACUERDO (Matizado)</td>
+                                <td class="justification">
+                                    Cierto, puede traer conflictos con autoridades o grupos que prefieren conformidad. Pero estos "problemas" son el precio de la autonomía y dignidad. Vale la pena.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">La libertad implica responsabilidad</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    Absolutamente. Como enseña Sartre, somos "condenados a ser libres" - con libertad viene la responsabilidad ineludible de nuestras elecciones. No hay libertad sin consecuencias.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">No todo lo legal es justo</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    Completamente. La esclavitud era legal, el apartheid era legal, la discriminación era legal. Legalidad ≠ moralidad. La historia muestra leyes injustas que requieren ser cuestionadas y cambiadas.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Decidir por presión social puede traer consecuencias</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    Sí. Las consecuencias incluyen: pérdida de autenticidad, arrepentimiento futuro, construcción de una vida que no es realmente la propia, y erosión del sentido del yo.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Es válido cambiar de opinión cuando reflexiono mejor</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    Esencial. Cambiar de opinión ante mejores argumentos es señal de madurez intelectual, no debilidad. Como decía Keynes: "Cuando los hechos cambian, cambio de opinión. ¿Usted qué hace?"
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">La filosofía ayuda a fortalecer la autoestima</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    Sí. El pensamiento filosófico desarrolla autonomía intelectual, claridad sobre valores propios y capacidad de defender posturas - todo fundamental para autoestima genuina basada en integridad.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Pensar críticamente me hace más libre</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    Totalmente. La libertad auténtica requiere capacidad de evaluar opciones críticamente. Sin pensamiento crítico, somos esclavos de propaganda, sesgos y manipulación externa.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="situation">Evitar pensar es una forma de escapar de la realidad</td>
+                                <td class="position">DE ACUERDO</td>
+                                <td class="justification">
+                                    Correcto. Evitar pensar profundamente sobre nuestra vida es una forma de "mala fe" (Sartre) - negar nuestra libertad y responsabilidad mediante la evasión y superficialidad.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="background: #fff9e6; padding: 25px; border-radius: 5px; margin-top: 30px; border-left: 5px solid #c5a572; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: #1a237e; margin-bottom: 15px;">📌 Frase Final para Reflexionar:</h4>
+                    <p style="color: #555; font-size: 1.15em; font-style: italic; margin: 0;">
+                        <strong>"La filosofía no siempre nos da respuestas, pero nos enseña a hacernos mejores preguntas."</strong>
+                    </p>
+                    <p style="color: #555; margin-top: 15px; margin-bottom: 0; line-height: 1.8;">
+                        Esta frase encapsula la esencia del pensamiento filosófico: no se trata de tener todas las respuestas correctas, sino de desarrollar la capacidad de cuestionar, reflexionar y buscar comprensión profunda. Las mejores preguntas nos llevan a mejores respuestas, y el proceso mismo de cuestionamiento nos transforma.
+                    </p>
+                </div>
+
+                <div class="answer" style="margin-top: 30px; background: linear-gradient(135deg, #1a237e 0%, #283593 100%); color: white; padding: 35px; box-shadow: 0 4px 15px rgba(26,35,126,0.3);">
+                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.3em;">🎯 Reflexión Final</h4>
+                    <p style="color: white; font-size: 1.05em; line-height: 1.9;">
+                        Estas actividades demuestran que la filosofía no es un ejercicio abstracto y distante, sino una herramienta vital para navegar la complejidad de la existencia humana. Cada pregunta filosófica que nos hacemos, cada dilema que examinamos críticamente, cada valor que cuestionamos y reconstruimos, nos acerca a vivir una vida más auténtica, coherente y significativa. 
+                    </p>
+                    <p style="color: white; font-size: 1.05em; line-height: 1.9; margin: 0;">
+                        La filosofía nos enseña que <strong>las preguntas importantes raramente tienen respuestas simples</strong>, pero el acto mismo de formularlas y explorarlas con rigor intelectual y honestidad es lo que nos hace plenamente humanos. En esta etapa crucial de transición hacia la vida adulta, el pensamiento filosófico no es opcional: es la brújula que nos permite navegar con dignidad, propósito y autonomía en un mundo complejo e incierto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
